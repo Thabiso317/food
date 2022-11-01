@@ -1,7 +1,7 @@
 import {  View, StyleSheet, Pressable, Image, Text, ScrollView, TouchableOpacity, Alert } from "react-native";
 import pic from './assets/image.png'
 import React,{useEffect, useState} from "react";
-import img from './assets/logo.png';
+import img from './assets/th.jpg';
 import back from './assets/arrow.png'
 
 

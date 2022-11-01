@@ -2,7 +2,7 @@ import {  View, StyleSheet, Pressable, Image, Text, ScrollView } from "react-nat
 import pic from './assets/image.png'
 import React,{useState} from "react";
 import { FlatGrid } from 'react-native-super-grid';
-import img from './assets/logo.png';
+import img from './assets/th.jpg';
 import back from './assets/arrow.png'
 
 
@@ -35,7 +35,7 @@ function Sides({navigation, route,test}){
                         itemAmount: item.amount
                           })}>
                            <View style={[styles.itemContainer]}>
-                                      <View style={{backgroundColor:'yellow', height:100,borderRadius: 15}}>
+                                      <View style={{backgroundColor:'white', height:100,borderRadius: 15}}>
                                         <Image style={{height:'100%', width:'100%',borderRadius: 15,}}  source={{uri: item.image}}/>   
                                       </View>
                                       <View style={{ height:60, bottom:0, position:"absolute", width:'100%'}}>
@@ -59,7 +59,7 @@ function Sides({navigation, route,test}){
 export default Sides;
 const styles = StyleSheet.create({
    Container: {
-      backgroundColor: 'black',
+      backgroundColor: 'white',
       height: '100%'
    },
    Inner: {

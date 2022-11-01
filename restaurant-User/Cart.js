@@ -1,7 +1,7 @@
 import {  View, StyleSheet, Pressable, Image, Text, ScrollView, Alert } from "react-native";
 import pic from './assets/image.png'
 import React,{useEffect, useState} from "react";
-import img from './assets/logo.png';
+import img from './assets/th.jpg';
 import back from './assets/arrow.png'
 import {addDoc,collection} from 'firebase/firestore'
 import {db} from './firebase/config'
@@ -85,7 +85,7 @@ const itemRef = collection(db,'oders')
 export default Cart;
 const styles = StyleSheet.create({
    Container: {
-      backgroundColor: 'black',
+      backgroundColor: 'white',
       height: '100%'
    },
   

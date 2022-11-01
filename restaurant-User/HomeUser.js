@@ -1,7 +1,7 @@
 import {  View, StyleSheet, Pressable, Image, Text, ScrollView } from "react-native";
 import pic from './assets/image.png'
 import { FlatGrid } from 'react-native-super-grid'
-import img from './assets/logo.png'
+import img from './assets/th.jpg'
 import React, { useEffect, useState } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from './firebase/config'

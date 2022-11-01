@@ -4,7 +4,7 @@ import {  createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from './firebase/config';
 
 
-const Signup = () => {
+const Signup = ({navigation}) => {
 
   const [name, setName] = useState('')
   const [surname, setsurName] = useState('')
@@ -21,6 +21,7 @@ const Signup = () => {
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    navigation.navigate('Login')
     // ...
   })
   .catch((error) => {

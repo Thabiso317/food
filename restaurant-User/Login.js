@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import reactDom from 'react-dom';
-import { StyleSheet, TextInput, View ,Image,Text} from 'react-native';
+import { StyleSheet, TextInput, View ,Image,Text, TouchableOpacity} from 'react-native';
 import { YellowBox } from 'react-native-web';
-import image from './assets/download.jpg'
+import image from './assets/th.jpg'
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import {auth, db} from './firebase/config';
 
 
 
 
-const Login = () => {
+const Login = ({navigation}) => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -19,11 +19,14 @@ const Login = () => {
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+      console.log('you ok');
+      navigation.navigate('UserHome')
       // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      console.log(error);
     });
   
    }
@@ -39,19 +42,24 @@ const Login = () => {
             <View  style={{width:"100%",height:"50%", alignItems:'center', justifyContent:'center',backgroundColor:'darkgray'}}>
                 <View><Text style={styles.Text}>Don't have your account?SignUp</Text></View>
               <View><Text > Login into your account</Text></View>
-                <TextInput style={[styles.inputs , {width:"80%", height:'10%'}]} onChange={(e)=>setEmail(e.target.value)} placeholder='email' />
-                <TextInput  style={[styles.inputs , {width:"80%", height:'10%'}]}onChange={(e)=>setPassword(e.target.value)} placeholder='password' />
+                <TextInput style={[styles.inputs , {width:"80%", height:'10%'}]} value={email} onChangeText={(text)=>setEmail(text)} placeholder='email' />
+                <TextInput  style={[styles.inputs , {width:"80%", height:'10%'}]} value={password} onChangeText={(text)=>setPassword(text)} placeholder='password' />
                 <View><Text >Forgot Passward</Text></View>
                 <View><Text style={styles.Text}>Forgot your password</Text></View>
+                <TouchableOpacity  onPress={logFunction} style={styles.button}>
                 
-                <View onPress={()=>logFunction} style={styles.button}>
                   <Text>Login In</Text>
-                  </View>
+                  
+                </TouchableOpacity>
+                
+               <TouchableOpacity onPress={()=>navigation.navigate('Signup')}>  
                
                 <View>
-                  <Text style={styles.Text}>
+                  <Text >
                     Don't have your account? SignUp </Text>
                 </View>
+                </TouchableOpacity>
+             
             </View>
           </View>
              
@@ -83,6 +91,7 @@ const styles = StyleSheet.create({
     borderRadius:10
   },
   Text:{
-    color:'white'
+    color:'white',
+    marginBottom:10
   }
 })

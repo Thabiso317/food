@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from './firebase/config.js'
-import logo from './assets/logo.png'
+import logo from './assets/th.jpg'
 import Register from "./Register";
 import HomeUser from "./HomeUser";
 import BreakFast from "./BreakFast.js";

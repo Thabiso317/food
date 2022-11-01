@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, StyleSheet, Image, Pressable,TextInput } from "react-native";
 import {addDoc, collection} from 'firebase/firestore'
-import logo from './assets/logo.png';
+import logo from './assets/th.jpg';
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 import {auth, db} from './firebase/config';
 

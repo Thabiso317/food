@@ -2,7 +2,7 @@ import {  View, StyleSheet, Pressable, Image, Text, ScrollView } from "react-nat
 import pic from './assets/image.png'
 import React,{useState} from "react";
 import { FlatGrid } from 'react-native-super-grid';
-import img from './assets/logo.png';
+import img from './assets/th.jpg';
 import back from './assets/arrow.png'
 
 
